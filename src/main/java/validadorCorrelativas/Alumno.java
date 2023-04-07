@@ -28,11 +28,16 @@ public class Alumno {
         return materiasAprobadas;
     }
 
+
+    public void agregarMateriaAprobada (Materia materia) {
+        this.materiasAprobadas.add(materia);
+    }
     public boolean tenesCorrelativa(Materia materiaCorrelativa) {
         return this.materiasAprobadas.contains(materiaCorrelativa);
 
     }
-    public void agregarMateriaAprobada (Materia materia) {
-        this.materiasAprobadas.add(materia);
+    @Override
+    public String toString (){
+        return this.nombre;
     }
 }

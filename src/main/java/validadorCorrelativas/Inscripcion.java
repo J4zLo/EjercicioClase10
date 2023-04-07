@@ -2,11 +2,11 @@ package validadorCorrelativas;
 
 import java.time.LocalDate;
 
-public class Inscipcion {
+public class Inscripcion {
     private Alumno alumno;
     private Materia materia;
     private LocalDate fecha;
-    public Inscipcion(Alumno alumno, Materia materia) {
+    public Inscripcion(Alumno alumno, Materia materia) {
         this.alumno = alumno;
         this.materia = materia;
         this.fecha = LocalDate.now();
@@ -32,5 +32,8 @@ public class Inscipcion {
         return !this.materia.tenesCorrelativas() || this.materia.puedeCursar (this.alumno);
     }
 
+    public String leyendaEstado (){
+        return this.aprobada()?"Aprobada" : "Rechazada";
+    }
 
 }

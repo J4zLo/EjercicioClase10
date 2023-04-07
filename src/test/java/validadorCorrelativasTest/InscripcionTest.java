@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import validadorCorrelativas.Alumno;
-import validadorCorrelativas.Inscipcion;
+import validadorCorrelativas.Inscripcion;
 import validadorCorrelativas.Materia;
 
 public class InscripcionTest {
@@ -28,18 +28,16 @@ public class InscripcionTest {
 
 
 
-
-
     @Test
     public void juanSePuedeAnotarAProgramacionI(){
-        Inscipcion inscripcionDeJuanAProgI = new Inscipcion(this.juan, this.programacionI);
+        Inscripcion inscripcionDeJuanAProgI = new Inscripcion(this.juan, this.programacionI);
 
         Assertions.assertTrue(inscripcionDeJuanAProgI.aprobada());
 
     }
     @Test
     public void juanNoSePuedeAnotarAProgramacionII(){
-        Inscipcion inscripcionDeJuanAProgII = new Inscipcion(this.juan, this.programacionII);
+        Inscripcion inscripcionDeJuanAProgII = new Inscripcion(this.juan, this.programacionII);
 
         Assertions.assertFalse(inscripcionDeJuanAProgII.aprobada());
 
@@ -47,7 +45,7 @@ public class InscripcionTest {
     @Test
     public void juanSePuedeAnotarAProgramacionII(){
         juan.agregarMateriaAprobada(programacionI);
-        Inscipcion inscripcionDeJuanAProgII = new Inscipcion(this.juan, this.programacionII);
+        Inscripcion inscripcionDeJuanAProgII = new Inscripcion(this.juan, this.programacionII);
 
         Assertions.assertTrue(inscripcionDeJuanAProgII.aprobada());
 

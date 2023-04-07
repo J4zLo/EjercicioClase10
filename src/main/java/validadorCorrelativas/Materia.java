@@ -5,7 +5,15 @@ import java.util.List;
 public class Materia {
     private String nombre;
     private List<Materia> correlativas;
-    private int id;
+    private String idMateria;
+
+    public String getIdMateria() {
+        return idMateria;
+    }
+
+    public void setIdMateria(String idMateria) {
+        this.idMateria = idMateria;
+    }
 
     public String getNombre() {
         return nombre;
@@ -33,5 +41,10 @@ public class Materia {
 
     public boolean tenesCorrelativas() {
         return !this.correlativas.isEmpty(); //Si tiene correlativas mi coleccion no esta vacia!
+    }
+
+    @Override
+    public String toString() {
+        return this.nombre;
     }
 }
